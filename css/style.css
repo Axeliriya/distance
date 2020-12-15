@@ -1,6 +1,23 @@
 body {
   font-family: sans-serif;
+  background: #e5e5e5;
 }
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .header {
   background: #0050b3;
   padding: 8px 0;
@@ -27,9 +44,31 @@ body {
   background: #ffffff;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
-  background-image: url(../images/icon-search.svg);
+  /* background-image: url(../images/icon-search.svg);
   background-repeat: no-repeat;
-  background-position: right 12px center;
+  background-position: right 12px center; */
+}
+
+.search-input::placeholder {
+  color: #bfbfbf;
+}
+
+.search-label {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  bottom: 0;
+  fill: #8c8c8c;
+}
+
+.search-input:focus + .search-icon {
+  fill: #003a8c;
+  width: 18px;
+  height: 18px;
+  bottom: -1px;
 }
 
 .navigation {
@@ -45,7 +84,6 @@ body {
 
 .navigation-link {
   color: #ffffff;
-  text-decoration: none;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.57;
@@ -55,7 +93,7 @@ body {
 }
 
 .navigation-link::before {
-  content: "";
+  content: '';
   width: 1px;
   height: 16px;
   background-color: #003a8c;
@@ -63,12 +101,16 @@ body {
 }
 
 .navigation-link:last-child::after {
-  content: "";
+  content: '';
   display: inline-block;
   width: 1px;
   height: 16px;
   background-color: #003a8c;
   margin-left: 12px;
+}
+/* мэйн */
+.flexbox {
+  display: flex;
 }
 
 .user {
@@ -107,10 +149,80 @@ body {
 }
 
 .icon-link:last-child:before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 1px;
   height: 16px;
   background-color: #003a8c;
   margin-right: 12px;
+}
+
+.main {
+  margin-top: 16px;
+}
+
+.menu-sidebar {
+  max-width: 192px;
+  margin-right: 18px;
+}
+
+.menu-sidebar .user-avatar {
+  width: 24px;
+  height: 24px;
+}
+.menu-sidebar .user-name {
+  font-weight: normal;
+  color: #262626;
+}
+
+.nav-group:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.user-fullname {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.nav-title {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.67;
+  color: #262626;
+  font-weight: 600;
+}
+
+.nav-text {
+  font-size: 14px;
+  line-height: 1.57;
+  color: #595959;
+  margin-left: 8px;
+}
+
+.down-text {
+  color: #1890ff;
+}
+
+.nav-icon-down {
+  display: block;
+  padding: 4px;
+  fill: #bfbfbf;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.nav-link.active {
+  background: #ffffff;
+}
+
+.nav-link.active .nav-text {
+  font-weight: 600;
+  color: #000000;
 }
