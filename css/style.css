@@ -148,7 +148,7 @@ body {
   fill: #ffffff;
 }
 
-.icon-link:last-child:before {
+.icon-link:nth-child(4):before {
   content: '';
   display: inline-block;
   width: 1px;
